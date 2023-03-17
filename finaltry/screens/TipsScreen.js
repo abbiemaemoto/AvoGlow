@@ -2,59 +2,59 @@ import React from "react"
 import { StyleSheet, ScrollView, View, Header, Text, Image, FlatList } from "react-native";
 import Constants from 'expo-constants';
 import Tip from "../Tip";
-import assets from "../";
+// import assets from "../";
 export default function TipsScreen() {
-    const TipsData = [
-        {
-            id: '1',
-            name: 'Diet',
-            description: "add description here",
-            imageUrl: assets.apple,
-        },  
-        {   
+    const TipsData = [
+        {
+            id: '1',
+            name: 'Diet',
+            description: "add description here",
+//             imageUrl: assets.apple,
+        },  
+        {   
             id: '2',
             name: 'Foods to Avoid',
             description: "add description here",
-            imageUrl: assets.butter,
+//             imageUrl: assets.butter,
         },
         {
             id: '3',
             name: 'Skin Care',
             description: "add description here",
-            imageUrl: assets.skincare,
+//             imageUrl: assets.skincare,
         },
         {
             id: '4',
             name: 'Habits',
             description: "add description here",
-            imageUrl: assets.habits,
+//             imageUrl: assets.habits,
         },
         {
             id: '5',
             name: 'Wellbeing',
             description: "add description here",
-            imageUrl: assets.healthcare,
+//             imageUrl: assets.healthcare,
         },
-    ]
+    ];
 
     const renderTip = ({ item }) => (
-        <Tip
-          id={item.id}
-          name={item.name}
-          description={item.description}
-          imageUrl={item.imageUrl}
-        />
-      );
+        <Tip
+        id={item.id}
+        name={item.name}
+        description={item.description}
+
+    />
+    );
     
-      return (
-        <View style={styles.container}>
-          <FlatList
-            data={TipsData} // the array of data that the FlatList displays
-            renderItem={(item) => renderTip(item)} // function that renders each item
-            keyExtractor={(item) => item.id} // unique key for each item
-          />
-        </View>
-      );
+    return (
+        <View style={styles.container}>
+            <FlatList
+            data={TipsData} 
+            renderItem={(item) => renderTip(item)}
+            keyExtractor={(item) => item.id}
+            />
+        </View>
+        );
 }
 
 const styles = StyleSheet.create({

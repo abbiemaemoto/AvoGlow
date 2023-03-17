@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "expo": "^48.0.7",
+    "express": "^4.18.2",
+    "metro-core": "^0.76.0",
+    "moment": "^2.29.4",
+    "react-native-calendar-picker": "^7.1.4"
+  },
+  "devDependencies": {
+    "metro": "^0.76.0"
+  }
+}

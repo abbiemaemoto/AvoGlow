@@ -9,7 +9,7 @@ export default function Tip({ name, description, imageUrl, id }) {
                     <Text>{description}</Text>
                 </View>
             </View>
-            <Image style={styles.image} source={imageUrl}/>
+{/*             <Image style={styles.image} source={imageUrl}/> */}
         </View>
     )
 }
