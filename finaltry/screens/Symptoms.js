@@ -71,7 +71,12 @@ const Symptoms = () => {
 
 
   return (
+
     <View style={styles.container}>
+        <View style={styles.section}>
+            <Text style={styles.date}>Friday, March 17, 2022</Text>
+        </View>
+
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>Select your skin type</Text>
 
@@ -116,7 +121,7 @@ const Symptoms = () => {
             <SaveButton
                 key={saves}
                 label={saves}
-                isSelected={saveOption ===saves}
+                isSelected={saveOption === saves}
                 onPress={() => setSaveOption(saves)}
             />
         ))}
@@ -136,7 +141,7 @@ const styles = StyleSheet.create({
     padding: 16,
   },
   section: {
-    marginBottom: 32,
+    marginBottom: 20,
   },
   sectionTitle: {
     fontSize: 20,
@@ -157,5 +162,9 @@ const styles = StyleSheet.create({
   selectedButtonText: {
     color: '#FFF',
     fontFamily: 'AvenirNext-DemiBold',
+  },
+  date: {
+    fontFamily: 'AvenirNext-DemiBold',
+    fontSize: 20,
   },
 });
