@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View, Image } from 'react-native';
 
 export default function Tip({ name, description, imageUrl, id }) {
+<<<<<<< HEAD
     return (
         <View style={styles.item}>
             <View style={styles.textSection}>
@@ -10,6 +11,15 @@ export default function Tip({ name, description, imageUrl, id }) {
                 </View>
             </View>
 {/*             <Image style={styles.image} source={imageUrl}/> */}
+=======
+    return (
+        <View style={styles.item}>
+            <View style={styles.textSection}>
+                <Text style={styles.name}>{name}</Text>
+                <Text style={styles.info}>{description}</Text>
+
+            </View>
+>>>>>>> ce010ef6 (Evelyn)
         </View>
     )
 }
@@ -30,12 +40,13 @@ const styles = StyleSheet.create({
     },
     name: {
         fontSize: 22,
-        fontWeight: 'bold',
+        fontFamily: 'AvenirNext-DemiBold',
         color: 'white',
         marginBottom: 10,
     },
-    info: {
+    info: {
         fontSize: 16,
+        fontFamily: 'AvenirNext-Regular',
         color: 'white',
         padding: 4,
     },

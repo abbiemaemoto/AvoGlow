@@ -14,21 +14,32 @@ const HomeScreen = ({ navigation, TipsScreen, CalendarScreen }) => {
   return (
     <View style = {styles.main}>
       <Text style = {styles.title}>Welcome to AvoGlow</Text>
+
+
+      <View style = {styles.space}>
+        <View style = {styles.button}>
+          <Pressable onPress={() => navigation.navigate('Symptoms')}>
+            <Text style = {styles.text}>Symptoms</Text>
+          </Pressable>
+        </View> 
+      </View> 
+
+      <View style = {styles.space}>
+        <View style = {styles.button}>
+          <Pressable onPress={() => navigation.navigate('CalendarScreen')}>
+            <Text style = {styles.text}>My Calendar</Text>
+          </Pressable>
+        </View> 
+      </View>
+
+
       <View style = {styles.button}>
         <Pressable onPress={() => navigation.navigate('TipsScreen')}>
           <Text style = {styles.text}>Skin Care Tips</Text>
         </Pressable>
       </View> 
-      <View style = {styles.button}>
-        <Pressable onPress={() => navigation.navigate('CalendarScreen')}>
-          <Text style = {styles.text}>My Calendar</Text>
-        </Pressable>
-      </View> 
-      <View style = {styles.button}>
-        <Pressable onPress={() => navigation.navigate('Symptoms')}>
-          <Text style = {styles.text}>Record Symptoms</Text>
-        </Pressable>
-      </View> 
+
+
     </View>
 
   )
@@ -44,23 +55,23 @@ export default function NavigationSreens() {
       <Stack.Screen name="TipsScreen" component={TipsScreen} style={styles.text} options={{
         title:'Skin Care Tips',
         headerStyle: {
-          backgroundColor: "white",
+          backgroundColor: '#F28482',
         },
-        headerTintColor: "black",
+        headerTintColor: 'white',
         }} />
       <Stack.Screen name="CalendarScreen" component={CalendarScreen} style={styles.text} options={{
         title:'My Calendar',
         headerStyle: {
-        backgroundColor: "white",
+        backgroundColor: '#84A59D',
         },
-        headerTintColor: "black",
+        headerTintColor: 'white',
         }} />
       <Stack.Screen name="Symptoms" component={Symptoms} style={styles.text} options={{
         title:'Record Symptoms',
         headerStyle: {
-        backgroundColor: "white",
+        backgroundColor: '#F6BD60',
         },
-        headerTintColor: "black",
+        headerTintColor: 'white',
         }} />
     </Stack.Navigator>
   </NavigationContainer>
@@ -72,19 +83,31 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    color: '#F5CAC3'
+
   },
   title: {
     fontSize: 25,
+    fontFamily: 'AvenirNext-DemiBold',
     color: 'black',
     padding: 20,
   },
   text: {
-    fontSize: 10,
+    fontSize: 12,
+    fontFamily: 'AvenirNext-Regular',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    color: 'white',
   },
+  space: {
+    marginBottom: 15,
+  },
+  
   button: {
-    padding: 10,
+    padding: 15,
+    width: 110,
     borderRadius: 1000,
-    backgroundColor: 'blue',
+    backgroundColor: '#F28482',
 
   }
 })
