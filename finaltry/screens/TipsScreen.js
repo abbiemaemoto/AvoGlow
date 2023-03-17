@@ -42,7 +42,9 @@ export default function TipsScreen() {
     
     return (
         <View style={styles.container}>
-            <Text style={styles.title}>Skin Care Tips</Text>
+            <View style={styles.textbox}>
+                <Text style={styles.title}>Skin Care Tips</Text>
+            </View>
             <FlatList
             data={TipsData} 
             renderItem={(item) => renderTip(item)}
@@ -56,10 +58,9 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         justifyContent: 'center',
-        paddingTop: Constants.statusBarHeight,
-        backgroundColor: 'white',
+        marginTop: 20,
         padding: 10,
-  },
+    },
     title: {
         marginBottom: 10,
         fontSize: 30,
@@ -67,5 +68,9 @@ const styles = StyleSheet.create({
         color: 'black',
         flexDirection: 'row',
         justifyContent: 'center'
-    }
+    },
+    textbox: {
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
 });

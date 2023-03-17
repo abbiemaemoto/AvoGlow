@@ -19,7 +19,9 @@ const HomeScreen = ({ navigation, TipsScreen, CalendarScreen }) => {
       <View style = {styles.space}>
         <View style = {styles.button}>
           <Pressable onPress={() => navigation.navigate('Symptoms')}>
-            <Text style = {styles.text}>Symptoms</Text>
+            <View style={styles.textbox}>
+              <Text style = {styles.text}>Symptoms</Text>
+            </View>
           </Pressable>
         </View> 
       </View> 
@@ -27,7 +29,9 @@ const HomeScreen = ({ navigation, TipsScreen, CalendarScreen }) => {
       <View style = {styles.space}>
         <View style = {styles.button}>
           <Pressable onPress={() => navigation.navigate('CalendarScreen')}>
-            <Text style = {styles.text}>My Calendar</Text>
+            <View style={styles.textbox}>
+              <Text style = {styles.text}>My Calendar</Text>
+            </View>
           </Pressable>
         </View> 
       </View>
@@ -35,7 +39,9 @@ const HomeScreen = ({ navigation, TipsScreen, CalendarScreen }) => {
 
       <View style = {styles.button}>
         <Pressable onPress={() => navigation.navigate('TipsScreen')}>
-          <Text style = {styles.text}>Skin Care Tips</Text>
+          <View style={styles.textbox}>
+            <Text style = {styles.text}>Skin Care Tips</Text>
+          </View>
         </Pressable>
       </View> 
 
@@ -96,13 +102,15 @@ const styles = StyleSheet.create({
     fontSize: 12,
     fontFamily: 'AvenirNext-Regular',
     flexDirection: 'row',
-    justifyContent: 'center',
     color: 'white',
   },
   space: {
     marginBottom: 15,
   },
-  
+  textbox: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   button: {
     padding: 15,
     width: 110,
