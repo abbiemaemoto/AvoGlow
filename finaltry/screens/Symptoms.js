@@ -142,6 +142,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold',
     marginBottom: 16,
+    fontFamily: 'AvenirNext-DemiBold',
   },
   button: {
     backgroundColor: '#eee',
@@ -151,9 +152,10 @@ const styles = StyleSheet.create({
     marginBottom: 16,
   },
   selectedButton: {
-    backgroundColor: '#007AFF',
+    backgroundColor: '#F6BD60',
   },
   selectedButtonText: {
     color: '#FFF',
+    fontFamily: 'AvenirNext-DemiBold',
   },
 });
