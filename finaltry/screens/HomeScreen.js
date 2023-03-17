@@ -3,10 +3,14 @@ import React, { useState, useEffect } from 'react';
 import * as eva from '@eva-design/eva';
 // import { ApplicationProvider, Layout, Text } from '@ui-kitten/components';
 import { useNavigation } from '@react-navigation/native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import TipsScreen from "./TipsScreen";
+import CalendarScreen from "./CalendarScreen"
 
 
-export default function HomeScreen({ TipsScreen, CalendarScreen }) {
-  const navigation = useNavigation()
+const HomeScreen = ({ navigation, TipsScreen, CalendarScreen }) => {
+
   return (
     <View style = {styles.main}>
       <Text style = {styles.title}>Welcome to AvoGlow</Text>
@@ -15,11 +19,36 @@ export default function HomeScreen({ TipsScreen, CalendarScreen }) {
           <Text style = {styles.text}>Skin Care Tips</Text>
         </Pressable>
       </View> 
-        
     </View>
 
   )
 };
+
+const Stack = createStackNavigator();
+
+export default function NavigationSreens() {
+  return (
+  <NavigationContainer>
+    <Stack.Navigator style={styles.container}>
+      <Stack.Screen options={{headerShown: false}} name="HomeScreen" component={HomeScreen}/>
+      <Stack.Screen name="TipsScreen" component={TipsScreen} style={styles.text} options={{
+        title:'Skin Care Tips',
+        headerStyle: {
+          backgroundColor: "white",
+        },
+        headerTintColor: "black",
+        }} />
+      <Stack.Screen name="CalendarScreen" component={CalendarScreen} style={styles.text} options={{
+        title:'My Calendar',
+        headerStyle: {
+        backgroundColor: "white",
+        },
+        headerTintColor: "black",
+        }} />
+    </Stack.Navigator>
+  </NavigationContainer>
+  );
+}
 
 const styles = StyleSheet.create({
   main: {

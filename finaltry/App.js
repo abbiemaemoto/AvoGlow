@@ -37,25 +37,7 @@ export default () => {
             <SafeAreaView style={{ flex: 1, position: "relative" }}>
               {session ? (
                 <>
-                   <NavigationContainer>
-                    <Stack.Navigator style={styles.container}>
-                      <Stack.Screen options={{headerShown: false}} name="HomeScreen" component={HomeScreen}/>
-                      <Stack.Screen name="TipsScreen" component={TipsScreen} style={styles.text} options={{
-                        title:'Skin Care Tips',
-                        headerStyle: {
-                          backgroundColor: "white",
-                        },
-                        headerTintColor: "black",
-                      }} />
-                        <Stack.Screen name="CalendarScreen" component={CalendarScreen} style={styles.text} options={{
-                        title:'My Calendar',
-                        headerStyle: {
-                          backgroundColor: "white",
-                        },
-                        headerTintColor: "black",
-                      }} />
-                    </Stack.Navigator>
-                  </NavigationContainer>
+                   <HomeScreen/>
                 </>
               ) : (
                 <>
