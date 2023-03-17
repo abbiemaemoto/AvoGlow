@@ -1,17 +1,17 @@
 import { StyleSheet, Text, View, Image } from 'react-native';
 
 export default function Tip({ name, description, imageUrl, id }) {
-    return (
-        <View style={styles.item}>
-            <View style={styles.textSection}>
-                <Text style={styles.name}>{name}</Text>
-                <View style={styles.info}>
-                    <Text>{description}</Text>
-                </View>
-            </View>
+    return (
+        <View style={styles.item}>
+            <View style={styles.textSection}>
+                <Text style={styles.name}>{name}</Text>
+                <View style={styles.info}>
+                    <Text>{description}</Text>
+                </View>
+            </View>
 {/*             <Image style={styles.image} source={imageUrl}/> */}
-        </View>
-    )
+        </View>
+    )
 }
 
 const styles = StyleSheet.create({

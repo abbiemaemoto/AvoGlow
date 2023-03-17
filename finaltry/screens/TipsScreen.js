@@ -11,30 +11,30 @@ export default function TipsScreen() {
             description: "add description here",
 //             imageUrl: assets.apple,
         },  
-        {   
-            id: '2',
-            name: 'Foods to Avoid',
-            description: "add description here",
-//             imageUrl: assets.butter,
-        },
-        {
-            id: '3',
-            name: 'Skin Care',
-            description: "add description here",
-//             imageUrl: assets.skincare,
-        },
-        {
-            id: '4',
-            name: 'Habits',
-            description: "add description here",
-//             imageUrl: assets.habits,
-        },
-        {
-            id: '5',
-            name: 'Wellbeing',
-            description: "add description here",
-//             imageUrl: assets.healthcare,
-        },
+//         {   
+//             id: '2',
+//             name: 'Foods to Avoid',
+//             description: "add description here",
+// //             imageUrl: assets.butter,
+//         },
+//         {
+//             id: '3',
+//             name: 'Skin Care',
+//             description: "add description here",
+// //             imageUrl: assets.skincare,
+//         },
+//         {
+//             id: '4',
+//             name: 'Habits',
+//             description: "add description here",
+// //             imageUrl: assets.habits,
+//         },
+//         {
+//             id: '5',
+//             name: 'Wellbeing',
+//             description: "add description here",
+// //             imageUrl: assets.healthcare,
+//         },
     ];
 
     const renderTip = ({ item }) => (
@@ -58,11 +58,11 @@ export default function TipsScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    paddingTop: Constants.statusBarHeight,
-    backgroundColor: 'white',
-    padding: 10,
+    container: {
+        flex: 1,
+        justifyContent: 'center',
+        paddingTop: Constants.statusBarHeight,
+        backgroundColor: 'white',
+        padding: 10,
   },
 });

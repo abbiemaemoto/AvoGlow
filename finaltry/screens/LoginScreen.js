@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { Alert, StyleSheet, View } from "react-native";
+import { Alert, StyleSheet, View, Button } from "react-native";
 import { supabase } from "../supabase";
-import { Button, Input } from "@ui-kitten/components";
+import { Input, Text } from "@ui-kitten/components";
 
 export default function Auth() {
   const [email, setEmail] = useState("");
@@ -56,6 +56,7 @@ export default function Auth() {
       <View style={[styles.verticallySpaced, styles.mt20]}>
         <Button
           title="Sign in"
+          color="#84A59D"
           disabled={loading}
           onPress={() => signInWithEmail()}
         />
@@ -64,6 +65,7 @@ export default function Auth() {
         <Button
           title="Sign up"
           disabled={loading}
+          color="#84A59D"
           onPress={() => signUpWithEmail()}
         />
       </View>
