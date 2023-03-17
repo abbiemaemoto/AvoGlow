@@ -1,25 +1,12 @@
 import { StyleSheet, Text, View, Image } from 'react-native';
 
 export default function Tip({ name, description, imageUrl, id }) {
-<<<<<<< HEAD
     return (
         <View style={styles.item}>
             <View style={styles.textSection}>
                 <Text style={styles.name}>{name}</Text>
-                <View style={styles.info}>
-                    <Text>{description}</Text>
-                </View>
-            </View>
-{/*             <Image style={styles.image} source={imageUrl}/> */}
-=======
-    return (
-        <View style={styles.item}>
-            <View style={styles.textSection}>
-                <Text style={styles.name}>{name}</Text>
                 <Text style={styles.info}>{description}</Text>
-
             </View>
->>>>>>> ce010ef6 (Evelyn)
         </View>
     )
 }
