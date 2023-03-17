@@ -1,41 +1,63 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+
 
 const SkinTypes = ['Oily', 'Dry', 'Normal'];
-const BreakoutLocations = ['Chin', 'Forehead', 'Cheeks'];
+const BreakoutLocations = ['Chin', 'Forehead', 'Cheeks', 'Nose'];
 const DrynessOptions = ['Yes', 'No'];
+const Save = ['Save Changes'];
 
 const SkinTypeButton = ({ label, isSelected, onPress }) => (
-  <TouchableOpacity
-    onPress={onPress}
-    style={[styles.button, isSelected ? styles.selectedButton : null]}
-  >
-    <Text style={[styles.buttonText, isSelected ? styles.selectedButtonText : null]}>{label}</Text>
-  </TouchableOpacity>
-);
-
-const BreakoutLocationButton = ({ label, isSelected, onPress }) => (
-  <TouchableOpacity
-    onPress={onPress}
-    style={[styles.button, isSelected ? styles.selectedButton : null]}
-  >
-    <Text style={[styles.buttonText, isSelected ? styles.selectedButtonText : null]}>{label}</Text>
-  </TouchableOpacity>
-);
-
-const DrynessOptionButton = ({ label, isSelected, onPress }) => (
-  <TouchableOpacity
-    onPress={onPress}
-    style={[styles.button, isSelected ? styles.selectedButton : null]}
-  >
-    <Text style={[styles.buttonText, isSelected ? styles.selectedButtonText : null]}>{label}</Text>
-  </TouchableOpacity>
-);
+    <TouchableOpacity
+      onPress={onPress}
+      style={[styles.button, isSelected ? styles.selectedButton : null]}
+    >
+      <Text style={[styles.buttonText, isSelected ? styles.selectedButtonText : null]}>{label}</Text>
+    </TouchableOpacity>
+  );
+  
+  const BreakoutLocationButton = ({ label, isSelected, onPress }) => (
+    <TouchableOpacity
+      onPress={onPress}
+      style={[styles.button, isSelected ? styles.selectedButton : null]}
+    >
+      <Text style={[styles.buttonText, isSelected ? styles.selectedButtonText : null]}>{label}</Text>
+    </TouchableOpacity>
+  );
+  
+  const DrynessOptionButton = ({ label, isSelected, onPress }) => (
+    <TouchableOpacity
+      onPress={onPress}
+      style={[styles.button, isSelected ? styles.selectedButton : null]}
+    >
+      <Text style={[styles.buttonText, isSelected ? styles.selectedButtonText : null]}>{label}</Text>
+    </TouchableOpacity>
+  );
+  
+  const SaveButton = ({ label, isSelected }) => {
+    const navigation = useNavigation();
+  
+    const onPress = () => {
+      navigation.navigate('CalendarScreen');
+    };
+  
+    return (
+      <TouchableOpacity
+        onPress={onPress}
+        style={[styles.button, isSelected ? styles.selectedButton : null]}
+      >
+        <Text style={[styles.buttonText, isSelected ? styles.selectedButtonText : null]}>{label}</Text>
+      </TouchableOpacity>
+    );
+  };
+  
 
 const Symptoms = () => {
   const [selectedSkinType, setSelectedSkinType] = useState('');
   const [selectedBreakoutLocations, setSelectedBreakoutLocations] = useState([]);
   const [selectedDrynessOption, setSelectedDrynessOption] = useState('');
+  const [saveOption, setSaveOption] = useState('');
 
   const toggleBreakoutLocation = (location) => {
     const isSelected = selectedBreakoutLocations.includes(location);
@@ -46,6 +68,7 @@ const Symptoms = () => {
       setSelectedBreakoutLocations([...selectedBreakoutLocations, location]);
     }
   };
+
 
   return (
     <View style={styles.container}>
@@ -76,7 +99,7 @@ const Symptoms = () => {
       </View>
 
       <View style={styles.section}>
-        <Text style={styles.sectionTitle}>Are you experiencing skin dryness?</Text>
+        <Text style={styles.sectionTitle}>Are you experiencing skin redness?</Text>
 
         {DrynessOptions.map((option) => (
           <DrynessOptionButton
@@ -87,6 +110,20 @@ const Symptoms = () => {
           />
         ))}
       </View>
+
+      <View style={styles.section}>
+        {Save.map((saves) => (
+            <SaveButton
+                key={saves}
+                label={saves}
+                isSelected={saveOption ===saves}
+                onPress={() => setSaveOption(saves)}
+            />
+        ))}
+
+      </View>
+
+    
     </View>
   );
 };
@@ -112,5 +149,11 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
     paddingHorizontal: 16,
     marginBottom: 16,
+  },
+  selectedButton: {
+    backgroundColor: '#007AFF',
+  },
+  selectedButtonText: {
+    color: '#FFF',
   },
 });
