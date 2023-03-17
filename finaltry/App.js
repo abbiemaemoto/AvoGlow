@@ -9,6 +9,7 @@ import { supabase } from './supabase';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import TipsScreen from './screens/TipsScreen';
+import CalendarScreen from './screens/CalendarScreen';
 
 const Stack = createStackNavigator();
 
@@ -46,13 +47,13 @@ export default () => {
                         },
                         headerTintColor: "black",
                       }} />
-                        {/* <Stack.Screen name="CalendarScreen" component={CalendarScreen} style={styles.text} options={{
+                        <Stack.Screen name="CalendarScreen" component={CalendarScreen} style={styles.text} options={{
                         title:'My Calendar',
                         headerStyle: {
                           backgroundColor: "white",
                         },
                         headerTintColor: "black",
-                      }} /> */}
+                      }} />
                     </Stack.Navigator>
                   </NavigationContainer>
                 </>
