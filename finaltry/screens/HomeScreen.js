@@ -11,7 +11,7 @@ import Symptoms from "./Symptoms"
 const windowWidth = Dimensions.get("window").width;
 
 
-const HomeScreen = ({ navigation, TipsScreen, CalendarScreen }) => {
+const HomeScreen = ({ navigation }) => {
 
   return (
     <View style = {styles.main}>
@@ -63,7 +63,7 @@ export default function NavigationSreens() {
       <Stack.Screen name="TipsScreen" component={TipsScreen} style={styles.text} options={{
         title:'Skin Care Tips',
         headerStyle: {
-          backgroundColor: '#F28482',
+          backgroundColor: '#D05F66',
         },
         headerTintColor: 'white',
         }} />

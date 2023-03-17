@@ -5,7 +5,7 @@ export default function Tip({ name, description, imageUrl, id }) {
         <View style={styles.item}>
             <View style={styles.textSection}>
                 <Text style={styles.name}>{name}</Text>
-                {/* <Image style={styles.image} source={imageUrl}/> */}
+                <Image style={styles.image} source={imageUrl}/>
                 <Text style={styles.info}>{description}</Text>
             </View>
         </View>
@@ -14,7 +14,7 @@ export default function Tip({ name, description, imageUrl, id }) {
 
 const styles = StyleSheet.create({
     item: {
-        backgroundColor: '#F28482',
+        backgroundColor: '#D05F66',
         padding: 16,
         marginVertical: 8,
         flex: 1,
@@ -38,10 +38,9 @@ const styles = StyleSheet.create({
         color: 'white',
         padding: 4,
     },
-//     image: {
-//         width: 80,
-//         height: 80,
-//         margin: 5,
-//         resizeMode: 'contain',
-//     }
+    image: {
+        width: 80,
+        height: 80,
+        marginBottom: 10,
+    }
 })
