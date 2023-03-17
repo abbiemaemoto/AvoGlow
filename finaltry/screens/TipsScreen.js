@@ -36,7 +36,7 @@ export default function TipsScreen() {
         id={item.id}
         name={item.name}
         description={item.description}
-
+        
     />
     );
     

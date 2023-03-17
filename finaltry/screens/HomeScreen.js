@@ -8,13 +8,15 @@ import { createStackNavigator } from '@react-navigation/stack';
 import TipsScreen from "./TipsScreen";
 import CalendarScreen from "./CalendarScreen"
 import Symptoms from "./Symptoms"
+const windowWidth = Dimensions.get("window").width;
+
 
 const HomeScreen = ({ navigation, TipsScreen, CalendarScreen }) => {
 
   return (
     <View style = {styles.main}>
       <Text style = {styles.title}>Welcome to AvoGlow</Text>
-
+      <Image source={require('./avocado.png')} style={styles.image}/>
 
       <View style = {styles.space}>
         <View style = {styles.button}>
@@ -115,7 +117,12 @@ const styles = StyleSheet.create({
     padding: 15,
     width: 110,
     borderRadius: 1000,
-    backgroundColor: '#F28482',
-
+    backgroundColor: '#84A59D',
+  },
+  image: {
+    height: windowWidth * 0.3,
+    width: windowWidth * 0.3,
+    marginBottom: 40,
+    marginTop: 20,
   }
 })
