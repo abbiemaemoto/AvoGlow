@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
   },
     title: {
         marginBottom: 10,
-        fontSize: '30',
+        fontSize: 30,
         fontFamily: 'AvenirNext-DemiBold',
         color: 'black',
         flexDirection: 'row',
