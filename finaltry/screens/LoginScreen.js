@@ -1,3 +1,6 @@
+//Login Page code referenced from Supabase Docs
+//https://supabase.com/docs/guides/getting-started/tutorials/with-expo
+
 import React, { useState } from "react";
 import { Alert, StyleSheet, View, Button } from "react-native";
 import { supabase } from "../supabase";
