@@ -7,7 +7,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import TipsScreen from "./TipsScreen";
 import CalendarScreen from "./CalendarScreen"
-
+import Symptoms from "./Symptoms"
 
 const HomeScreen = ({ navigation, TipsScreen, CalendarScreen }) => {
 
@@ -17,6 +17,16 @@ const HomeScreen = ({ navigation, TipsScreen, CalendarScreen }) => {
       <View style = {styles.button}>
         <Pressable onPress={() => navigation.navigate('TipsScreen')}>
           <Text style = {styles.text}>Skin Care Tips</Text>
+        </Pressable>
+      </View> 
+      <View style = {styles.button}>
+        <Pressable onPress={() => navigation.navigate('CalendarScreen')}>
+          <Text style = {styles.text}>My Calendar</Text>
+        </Pressable>
+      </View> 
+      <View style = {styles.button}>
+        <Pressable onPress={() => navigation.navigate('Symptoms')}>
+          <Text style = {styles.text}>Record Symptoms</Text>
         </Pressable>
       </View> 
     </View>
@@ -40,6 +50,13 @@ export default function NavigationSreens() {
         }} />
       <Stack.Screen name="CalendarScreen" component={CalendarScreen} style={styles.text} options={{
         title:'My Calendar',
+        headerStyle: {
+        backgroundColor: "white",
+        },
+        headerTintColor: "black",
+        }} />
+      <Stack.Screen name="Symptoms" component={Symptoms} style={styles.text} options={{
+        title:'Record Symptoms',
         headerStyle: {
         backgroundColor: "white",
         },
