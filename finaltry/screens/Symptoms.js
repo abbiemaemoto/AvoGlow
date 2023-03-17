@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, ScrollView } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 
@@ -71,7 +71,7 @@ const Symptoms = () => {
 
 
   return (
-
+    <ScrollView>
     <View style={styles.container}>
         <View style={styles.section}>
             <Text style={styles.date}>Friday, March 17, 2022</Text>
@@ -130,6 +130,7 @@ const Symptoms = () => {
 
     
     </View>
+    </ScrollView>
   );
 };
 
