@@ -166,5 +166,6 @@ const styles = StyleSheet.create({
   date: {
     fontFamily: 'AvenirNext-DemiBold',
     fontSize: 20,
+    textAlign: 'center',
   },
 });
