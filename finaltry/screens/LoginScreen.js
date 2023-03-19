@@ -35,6 +35,9 @@ export default function Auth() {
 
   return (
     <View>
+      <View style = {styles.title}>
+        <Text style={styles.titletext}>Avoglow</Text>
+      </View> 
       <View style={[styles.verticallySpaced, styles.mt20]}>
         <Input
           label="Email"
@@ -80,6 +83,18 @@ const styles = StyleSheet.create({
   container: {
     marginTop: 40,
     padding: 12,
+  },
+  title: {
+    paddingTop: 20, 
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  titletext: {
+    fontSize: 40,
+    fontFamily: 'AvenirNext-DemiBold',
+    color: '#84A59D',
+    padding: 20,
   },
   verticallySpaced: {
     paddingTop: 4,
